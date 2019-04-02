@@ -16,3 +16,16 @@
 button{
     margin-right: 5px;
 }
+
+.images.position-1{
+    transform: translate(0);
+}
+.images.position-2{
+    transform: translate(-1000px);
+}
+.images.position-3{
+    transform: translate(-2000px);
+}
+.images.position-4{
+    transform: translate(-3000px);
+}
