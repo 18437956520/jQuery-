@@ -9,7 +9,10 @@
 }
 
 .window {
-    width: 300px;
+    width: 1000px;
     overflow: hidden;
     margin-bottom: 5px;
+}
+button{
+    margin-right: 5px;
 }

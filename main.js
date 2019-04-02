@@ -6,16 +6,16 @@ $(p1).on('click', function () {
 })
 $(p2).on('click', function () {
     $(images).css({
-        transform: 'translateX(-300px)'
+        transform: 'translateX(-1000px)'
     })
 })
 $(p3).on('click', function () {
     $(images).css({
-        transform: 'translateX(-600px)'
+        transform: 'translateX(-2000px)'
     })
 })
 $(p4).on('click', function () {
     $(images).css({
-        transform: 'translateX(-900px)'
+        transform: 'translateX(-3000px)'
     })
 })
