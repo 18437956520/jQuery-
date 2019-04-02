@@ -13,9 +13,14 @@ for(let i=0; i<allButtons.length; i++){
 
 /******自动轮播*******/
 var n = 0
-allButtons.eq(n%4).trigger('click')//jQuery.eq 会获取dom然后自动封装为jQuery 4个一组循环
+var size = allButtons.length
+allButtons.eq(n%size).trigger('click')//jQuery.eq 会获取dom然后自动封装为jQuery 4个一组循环
+    .addClass('red')
+    .siblings('.red').removeClass('red')
 setInterval(()=>{
     n += 1
-    allButtons.eq(n%4).trigger('click')
+    allButtons.eq(n%size).trigger('click')
+    .addClass('red')
+    .siblings('.red').removeClass('red')
 },1000)
 

@@ -16,3 +16,6 @@
 button{
     margin-right: 5px;
 }
+.red{
+    border: 2px solid grey;
+}
