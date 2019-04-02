@@ -1,3 +1,4 @@
+/******手动轮播*******/
 var allButtons = $('#buttons>button')
 
 for(let i=0; i<allButtons.length; i++){
@@ -9,3 +10,12 @@ for(let i=0; i<allButtons.length; i++){
         })
     })
 }
+
+/******自动轮播*******/
+var n = 0
+allButtons.eq(n%4).trigger('click')//jQuery.eq 会获取dom然后自动封装为jQuery 4个一组循环
+setInterval(()=>{
+    n += 1
+    allButtons.eq(n%4).trigger('click')
+},1000)
+
