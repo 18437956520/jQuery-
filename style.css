@@ -1,21 +1,9 @@
-.images {
-    display: flex;
-    align-items: flex-start;
-    transition: all 1s;
-}
+.images { display: flex; align-items: flex-start; transition: all 1s; }
 
-.images>img {
-    vertical-align: top;
-}
+.images>img { vertical-align: top; }
 
-.window {
-    width: 1000px;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-button{
-    margin-right: 5px;
-}
-.red{
-    border: 2px solid grey;
-}
+.window { width: 1000px; overflow: hidden; margin-bottom: 5px; }
+
+button{ margin-right: 5px; }
+
+.red{ border: 2px solid grey; }

@@ -9,35 +9,38 @@ for (let i = 0; i < allButtons.length; i++) {
             transform: 'translate(' + px + 'px)'
         })
         n = index
-        allButtons.eq(n)
-            .addClass('red')
-            .siblings('.red').removeClass('red')
+        activeButton(allButtons.eq(n))
     })
 }
 
 /******自动轮播*******/
 var n = 0
 var size = allButtons.length
-allButtons.eq(n % size).trigger('click') //jQuery.eq 会获取dom然后自动封装为jQuery 4个一组循环
-    .addClass('red')
-    .siblings('.red').removeClass('red')
-var timerId = setInterval(() => {
-    n += 1
-    allButtons.eq(n % size).trigger('click')
-        .addClass('red')
-        .siblings('.red').removeClass('red')
-}, 2000)
+playSlide(n % size)
+
+var timerId = setTimer()
+
+function setTimer() {
+    return setInterval(() => {
+        n += 1
+        playSlide(n % size)
+    }, 2000)
+}
+
+function playSlide(index) {
+    activeButton(allButtons.eq(index).trigger('click'))
+}
+
+function activeButton($button) {
+    $button.addClass('red').siblings('.red').removeClass('red')
+}
 
 /******浮动暂停*******/
 $('.window').on('mouseenter', function () {
     window.clearInterval(timerId)
 })
+
 /******离开开始*******/
 $('.window').on('mouseleave', function () {
-    timerId = setInterval(() => {
-        n += 1
-        allButtons.eq(n % size).trigger('click')
-            .addClass('red')
-            .siblings('.red').removeClass('red')
-    }, 2000)
+    timerId = setTimer()
 })
